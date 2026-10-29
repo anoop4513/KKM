@@ -1,0 +1,120 @@
+{
+  "origin": "https://kkmedia-5n9j19e33-anoop4513s-projects.vercel.app",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Katha Kantam Media | Creative. Marketing. Technology."
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "title": "Request a Proposal | Katha Kantam Media"
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "title": "About the Agency | Katha Kantam Media"
+    },
+    {
+      "path": "/global-partnerships/",
+      "status": 200,
+      "title": "Global Creative Partnerships | Katha Kantam Media"
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "title": "Privacy &amp; Enquiry Information | Katha Kantam Media"
+    },
+    {
+      "path": "/services/",
+      "status": 200,
+      "title": "Creative, Marketing &amp; Technology Services | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/",
+      "status": 200,
+      "title": "Industries We Serve | Katha Kantam Media"
+    },
+    {
+      "path": "/work/",
+      "status": 200,
+      "title": "Selected Work &amp; Project Stories | Katha Kantam Media"
+    },
+    {
+      "path": "/services/creative-media-production/",
+      "status": 200,
+      "title": "Creative &amp; Media Production | Katha Kantam Media"
+    },
+    {
+      "path": "/services/branding-creative-strategy/",
+      "status": 200,
+      "title": "Branding &amp; Creative Strategy | Katha Kantam Media"
+    },
+    {
+      "path": "/services/digital-marketing-growth/",
+      "status": 200,
+      "title": "Digital Marketing &amp; Growth | Katha Kantam Media"
+    },
+    {
+      "path": "/services/website-digital-experience/",
+      "status": 200,
+      "title": "Websites &amp; Digital Experiences | Katha Kantam Media"
+    },
+    {
+      "path": "/services/ai-business-automation/",
+      "status": 200,
+      "title": "AI &amp; Business Automation Consultation | Katha Kantam Media"
+    },
+    {
+      "path": "/services/crm-business-technology/",
+      "status": 200,
+      "title": "CRM &amp; Business Technology Consultation | Katha Kantam Media"
+    },
+    {
+      "path": "/services/data-analytics-performance/",
+      "status": 200,
+      "title": "Data Analytics &amp; Performance | Katha Kantam Media"
+    },
+    {
+      "path": "/services/global-creative-localization/",
+      "status": 200,
+      "title": "Global Creative &amp; Localization | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/healthcare/",
+      "status": 200,
+      "title": "Marketing &amp; Creative for Healthcare | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/education/",
+      "status": 200,
+      "title": "School Content &amp; Admissions Marketing | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/real-estate/",
+      "status": 200,
+      "title": "Real Estate Creative &amp; Marketing | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/founders-personal-brands/",
+      "status": 200,
+      "title": "Founder Content &amp; Personal Branding | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/salons-retail-local-businesses/",
+      "status": 200,
+      "title": "Marketing for Salons, Retail &amp; Local Businesses | Katha Kantam Media"
+    },
+    {
+      "path": "/industries/international-agencies/",
+      "status": 200,
+      "title": "Creative Support for International Agencies | Katha Kantam Media"
+    }
+  ],
+  "errors": [],
+  "enquiry_readiness": {
+    "ready": false,
+    "message": "Online enquiries are being connected. Please email your brief in the meantime."
+  }
+}

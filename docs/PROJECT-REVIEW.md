@@ -81,7 +81,15 @@ These are planning ranges for a complete project cycle with content review and r
 
 ## Preview and verification record
 
-**Review preview URL: pending.** Add the actual verified URL after deployment. No URL is invented here.
+**Verified review preview:** https://kkmedia-5n9j19e33-anoop4513s-projects.vercel.app/
+
+Source branch: `codex/kkm-global-motion` in `anoop4513/KKM`. Application commit: `55c06ea`. This deployment is a Vercel Preview, with the project's existing Vercel Authentication protection preserved; reviewers may need to sign in to the authorized account.
+
+Verified on October 29, 2026: all 22 deployed routes returned 200 with distinct rendered titles, headings and preview noindex metadata. The sitemap contains all 22 routes and uses the actual preview origin. Browser checks found no application errors. Local interaction checks passed for parallax speeds, reversible rotation, fixed-position stillness, word reveal, differential eye/head tracking, sticky stacking, portfolio filters, keyboard menu escape and reduced motion. Layouts were checked at 320, 390, 768, 1024 and 1440 pixels. Nine mocked backend tests passed; no live database write or notification delivery is claimed.
+
+The deployed enquiry readiness endpoint reports `ready: false`, as expected without the approved credentials. Online submission is disabled and the verified email alternative remains available. The finish reviewer returned `disposition: ship` for the two scored visual fixes: broader hero serif and single-column, 16px mobile form fields. The automated single-composite plate gate remains a documented process limitation because the requested motion uses three separately generated layers.
+
+The existing production deployment remained `dpl_Ao4XMKvXpiYjrovsPDtZbvqYCeac` at the final check. The original source checkout still has its original four uncommitted files and was not edited by this build.
 
 The preview is a review deliverable. Record build/type checks, browser checks, motion reversibility, small-screen layouts and reduced-motion behavior alongside it. Do not describe a Vercel `READY` state as proof that a protected preview is accessible to the intended reviewer. Do not describe passing mocked backend tests as proof of live Supabase writes or email delivery.
 
