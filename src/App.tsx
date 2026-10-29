@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowDown, ArrowUpRight, Menu, X, Plus, Instagram } from 'lucide-react';
+import { ArrowUpRight, Menu, X, Plus, Instagram } from 'lucide-react';
 import { projects, services, clientLogos } from './data';
 import HeroArtwork from './HeroArtwork';
 // Asset base keeps image URLs working when deployed under a subpath.
@@ -55,16 +55,24 @@ export default function App() {
     <header className="header">
       <a className="wordmark" href="#home" aria-label="Katha Kantam Media home" onClick={close}><span className="brand-symbol" aria-hidden="true">k<span>↗</span></span><span>Katha Kantam<small>MEDIA & STORIES</small></span></a>
       <nav className="desktop-nav" aria-label="Main navigation">{nav.map(([id,label]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav>
-      <a className="nav-cta" href="#contact">Let’s talk <ArrowUpRight size={17}/></a>
+      <a className="nav-cta" href="#contact">Get a Proposal <ArrowUpRight size={17}/></a>
       <button ref={menuButton} className="menu-toggle" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X/> : <Menu/>}</button>
-      {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{[...nav,['contact','Let’s talk']].map(([id,label]) => <a key={id} onClick={close} href={`#${id}`}>{label}<ArrowUpRight/></a>)}</nav>}
+      {menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{[...nav,['contact','Get a Proposal']].map(([id,label]) => <a key={id} onClick={close} href={`#${id}`}>{label}<ArrowUpRight/></a>)}</nav>}
     </header>
     <main id="main">
       <section id="home" className="hero wrap">
-        <div className="eyebrow hero-eyebrow"><span className="status-dot"/> INDEPENDENT CREATIVE CONTENT STUDIO <span className="hero-location">HINDUPUR, INDIA ↗</span></div>
-        <h1>Good stories.<br/><span>Lasting impact.</span><span className="hero-star" aria-hidden="true">✳</span></h1>
-        <div className="hero-bottom"><p>We turn what makes you different into<br/> stories people feel. And remember.</p><a className="pill dark" href="#work">Explore our work <ArrowDown size={18}/></a><span className="hero-note">STRATEGY. FILM. SOCIAL.<br/>A LITTLE DIFFERENT. BY DESIGN.</span></div>
+        <div className="eyebrow hero-eyebrow"><span className="status-dot"/> INDEPENDENT CREATIVE · DIGITAL GROWTH · TECHNOLOGY <span className="hero-location">HINDUPUR, INDIA ↗</span></div>
+        <h1>Creative.<br /><span>Marketing. Technology.<br />One Growth Partner.</span><span className="hero-star" aria-hidden="true">✳</span></h1>
+        <div className="hero-bottom"><p>We help ambitious businesses build stronger brands, reach the right audiences and grow through creative storytelling, digital marketing, technology and smart automation.</p><a className="pill dark" href="#contact">Get a Proposal <ArrowUpRight size={18}/></a><a className="text-link" href="#services">Explore Our Services <ArrowUpRight size={20}/></a></div>
         <HeroArtwork motion={motion}/>
+      </section>
+      <section className="pillars wrap section-space" aria-label="The four growth pillars">
+        <div className="pillars-grid">
+          <div className="pillar reveal"><span className="pillar-number">01</span><h3>Create</h3><p>Brand worlds, films, campaigns and content that give ambition a voice.</p></div>
+          <div className="pillar reveal"><span className="pillar-number">02</span><h3>Market</h3><p>We put the story in front of the right audience through growth that compounds.</p></div>
+          <div className="pillar reveal"><span className="pillar-number">03</span><h3>Automate</h3><p>We turn delivery into repeatable creative and business systems.</p></div>
+          <div className="pillar reveal"><span className="pillar-number">04</span><h3>Grow</h3><p>We measure, learn and scale what works into long-term growth.</p></div>
+        </div>
       </section>
       <section className="clients wrap" aria-label="Clients"><p className="eyebrow">GOOD COMPANY.<br/>GREAT COLLABORATIONS.</p><div className="client-list"><div className="client-track">{[0, 1].map(copy => <div className="client-group" key={copy} aria-hidden={copy === 1}>{clientLogos.map(client => <div className="client-logo" key={copy === 0 ? client.name : `${client.name}-copy`}><img loading="lazy" src={`${base}assets/images/${client.file}`} alt={client.name}/></div>)}</div>)}</div></div></section>
       <section id="work" className="work wrap section-space">
@@ -80,7 +88,7 @@ export default function App() {
         </article>;})}</div>
       </section>
       <section id="about" className="about section-space"><div className="wrap about-grid"><div><p className="eyebrow">02 / THE STUDIO</p><div className="about-emblem" aria-hidden="true">✳</div><span className="eyebrow">LOCAL ROOTS. LIMITLESS PERSPECTIVE.</span></div><div className="reveal"><h2>Every brand has a story.<br/><span>Let’s make yours<br/>impossible to ignore.</span></h2><p>We’re Katha Kantam Media, a creative content studio in Hindupur. We bring cinematic craft and clear strategy together to help ambitious brands connect with the people who matter.</p><p>Schools. Creators. Real estate. Community campaigns. Different worlds, one belief: the best content makes you feel something.</p><a className="text-link" href="#contact">Meet your next creative partner <ArrowUpRight size={20}/></a></div></div></section>
-      <section id="services" className="services wrap section-space"><div className="section-heading reveal"><div><p className="eyebrow">03 / WHAT WE DO</p><h2>Big picture thinking.<br/>Frame-by-frame craft.</h2></div><p>One creative partner.<br/>From idea to audience.</p></div><div className="service-list">{services.map((service,index) => <details className="service" key={service.title} open={index === 0 ? true : undefined}><summary><span className="service-number">0{index + 1}</span><h3>{service.title}</h3><Plus className="service-plus"/></summary><div className="service-body"><service.icon size={28}/><p>{service.description}</p><a href="#contact" aria-label={`Discuss ${service.title}`}>Let’s make it happen <ArrowUpRight size={17}/></a></div></details>)}</div></section>
+      <section id="services" className="services wrap section-space"><div className="section-heading reveal"><div><p className="eyebrow">03 / WHAT WE DO</p><h2>One partner.<br/>Eight disciplines.</h2></div><p>Creative, marketing, technology and automation — from first idea to measurable growth.</p></div><div className="service-list">{services.map((service,index) => <details className="service" key={service.title} open={index === 0 ? true : undefined}><summary><span className="service-number">0{index + 1}</span><h3>{service.title}</h3><Plus className="service-plus"/></summary><div className="service-body"><service.icon size={28}/><p>{service.description}</p><a href="#contact" aria-label={`Discuss ${service.title}`}>Let’s make it happen <ArrowUpRight size={17}/></a></div></details>)}</div></section>
       <section className="process wrap section-space"><p className="eyebrow">THE WAY WE WORK</p><div className="process-grid">{[['01','Find the story','We listen, ask questions, and find what makes your brand worth paying attention to.'],['02','Make it real','We shape the idea, build the narrative, and bring it to life with thoughtful production.'],['03','Put it out there','We help your content reach the right people, then learn what resonates.']].map(([n,title,copy]) => <div className="reveal" key={n}><span>{n} —</span><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
       <section id="contact" className="contact"><div className="wrap"><div className="contact-top"><p className="eyebrow"><span className="status-dot"/> YOUR NEXT CHAPTER STARTS HERE</p><span>HINDUPUR · WORKING ACROSS INDIA</span></div><a className="contact-title" href="mailto:kathakaantam@gmail.com">Let’s make<br/>a little noise.<ArrowUpRight aria-hidden="true"/></a><div className="contact-bottom"><a className="pill dark" href="mailto:kathakaantam@gmail.com">Tell us your story <ArrowUpRight size={18}/></a><a className="email" href="mailto:kathakaantam@gmail.com">kathakaantam@gmail.com</a><a className="instagram" href="https://www.instagram.com/kathakanthammedia?igsh=MXNmMmVmaXF5NDA4NQ==" target="_blank" rel="noopener noreferrer"><Instagram size={18}/> Instagram <ArrowUpRight size={16}/></a></div></div></section>
     </main>

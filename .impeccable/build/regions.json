@@ -1,0 +1,125 @@
+{
+  "regions": [
+    {
+      "id": "header",
+      "kind": "chrome",
+      "pixelBox": {
+        "x": 60,
+        "y": 19,
+        "w": 1300,
+        "h": 54
+      },
+      "note": "Provisional brand mark at left, semantic nav and proposal button",
+      "codeDrawn": true
+    },
+    {
+      "id": "creative",
+      "kind": "text",
+      "pixelBox": {
+        "x": 63,
+        "y": 174,
+        "w": 427,
+        "h": 91
+      },
+      "note": "Large bold black display; Creative.",
+      "codeDrawn": true
+    },
+    {
+      "id": "marketing",
+      "kind": "text",
+      "pixelBox": {
+        "x": 63,
+        "y": 274,
+        "w": 526,
+        "h": 89
+      },
+      "note": "Large bold black display; Marketing.",
+      "codeDrawn": true
+    },
+    {
+      "id": "technology",
+      "kind": "text",
+      "pixelBox": {
+        "x": 63,
+        "y": 376,
+        "w": 605,
+        "h": 91
+      },
+      "note": "Large bold black display; Technology.",
+      "codeDrawn": true
+    },
+    {
+      "id": "partner",
+      "kind": "text",
+      "pixelBox": {
+        "x": 65,
+        "y": 497,
+        "w": 530,
+        "h": 57
+      },
+      "note": "Gold editorial serif line; One Growth Partner.",
+      "codeDrawn": true
+    },
+    {
+      "id": "support",
+      "kind": "text",
+      "pixelBox": {
+        "x": 64,
+        "y": 588,
+        "w": 533,
+        "h": 110
+      },
+      "note": "Semantic supporting statement readable at 20px",
+      "codeDrawn": true
+    },
+    {
+      "id": "hero-actions",
+      "kind": "control",
+      "pixelBox": {
+        "x": 65,
+        "y": 736,
+        "w": 540,
+        "h": 61
+      },
+      "note": "Primary proposal, secondary services",
+      "codeDrawn": true
+    },
+    {
+      "id": "optical-sculpture",
+      "kind": "plate",
+      "pixelBox": {
+        "x": 674,
+        "y": 83,
+        "w": 748,
+        "h": 749
+      },
+      "note": "Gold aperture black iris, rear gold loop, front gold ribbon; regenerate as alpha plates"
+    },
+    {
+      "id": "art-caption",
+      "kind": "text",
+      "pixelBox": {
+        "x": 1283,
+        "y": 833,
+        "w": 92,
+        "h": 18
+      },
+      "note": "Small Concept artwork disclosure",
+      "codeDrawn": true
+    },
+    {
+      "id": "pillars",
+      "kind": "text",
+      "pixelBox": {
+        "x": 64,
+        "y": 878,
+        "w": 1296,
+        "h": 210
+      },
+      "note": "Open four pillar columns, no card background",
+      "codeDrawn": true
+    }
+  ],
+  "allowUncovered": true,
+  "mappingNote": "All visible content is individually named; coarse grid cells overlap margins of tight element boxes."
+}

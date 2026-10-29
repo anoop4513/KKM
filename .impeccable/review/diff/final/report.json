@@ -1,0 +1,437 @@
+{
+  "tool": "comp-diff",
+  "version": 1,
+  "createdAt": "2026-10-29T04:43:47.184Z",
+  "label": "desktop-hero",
+  "comp": ".impeccable\\mocks\\open-lens.png",
+  "build": ".impeccable\\review\\desktop-hero.png",
+  "spec": ".impeccable\\build\\spec.json",
+  "compSize": "1422x1106",
+  "buildSize": "1440x1106",
+  "align": "top",
+  "overall": 0.7214,
+  "verdict": "drift",
+  "scores": {
+    "overall": 0.7214,
+    "structure": 0.5025,
+    "color": 0.9088,
+    "colorIntersection": 0.8601,
+    "paletteMatch": 0.935,
+    "detail": 0.7364,
+    "detailRaw": 0.7572,
+    "detailAdded": 0.0417,
+    "bands": 0.8947
+  },
+  "palette": {
+    "comp": [
+      {
+        "hex": "#f7f7f7",
+        "coverage": 0.7279
+      },
+      {
+        "hex": "#0f0e0d",
+        "coverage": 0.1096
+      },
+      {
+        "hex": "#937047",
+        "coverage": 0.0561
+      },
+      {
+        "hex": "#d1ad7c",
+        "coverage": 0.0439
+      },
+      {
+        "hex": "#f7e9c2",
+        "coverage": 0.0395
+      },
+      {
+        "hex": "#5c4326",
+        "coverage": 0.0229
+      }
+    ],
+    "build": [
+      {
+        "hex": "#f8f8f8",
+        "coverage": 0.7327
+      },
+      {
+        "hex": "#171514",
+        "coverage": 0.0986
+      },
+      {
+        "hex": "#835f35",
+        "coverage": 0.0542
+      },
+      {
+        "hex": "#f8eac1",
+        "coverage": 0.0477
+      },
+      {
+        "hex": "#bb935e",
+        "coverage": 0.0432
+      },
+      {
+        "hex": "#e8c38b",
+        "coverage": 0.0237
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "header",
+      "x": 0.0422,
+      "y": 0.0172,
+      "w": 0.9142,
+      "h": 0.0488,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.5586,
+        "structure": 0.7705,
+        "color": 0.9158,
+        "colorIntersection": 0.8405,
+        "paletteMatch": 0.9563,
+        "detail": 0.24,
+        "detailRaw": 0.3077,
+        "detailAdded": 0.1354,
+        "bands": 0
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 4,
+          "y": 1,
+          "w": 1295,
+          "h": 47
+        },
+        "build": {
+          "x": 7,
+          "y": 9,
+          "w": 1292,
+          "h": 45
+        }
+      }
+    },
+    {
+      "id": "creative",
+      "x": 0.0443,
+      "y": 0.1573,
+      "w": 0.3003,
+      "h": 0.0823,
+      "kind": "text",
+      "score": {
+        "overall": 0.6743,
+        "structure": 0.5249,
+        "color": 0.8246,
+        "colorIntersection": 0.6651,
+        "paletteMatch": 0.9106,
+        "detail": 0.7296,
+        "detailRaw": 0.7452,
+        "detailAdded": 0.0313,
+        "bands": 0.9625
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 4,
+          "w": 414,
+          "h": 86
+        },
+        "build": {
+          "x": 4,
+          "y": 7,
+          "w": 402,
+          "h": 78
+        }
+      }
+    },
+    {
+      "id": "marketing",
+      "x": 0.0443,
+      "y": 0.2477,
+      "w": 0.3699,
+      "h": 0.0805,
+      "kind": "text",
+      "score": {
+        "overall": 0.572,
+        "structure": 0.4111,
+        "color": 0.807,
+        "colorIntersection": 0.6214,
+        "paletteMatch": 0.907,
+        "detail": 0.7524,
+        "detailRaw": 0.768,
+        "detailAdded": 0.0313,
+        "bands": 0.5182
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 4,
+          "y": 5,
+          "w": 491,
+          "h": 84
+        },
+        "build": {
+          "x": 8,
+          "y": 10,
+          "w": 474,
+          "h": 79
+        }
+      }
+    },
+    {
+      "id": "technology",
+      "x": 0.0443,
+      "y": 0.34,
+      "w": 0.4255,
+      "h": 0.0823,
+      "kind": "text",
+      "score": {
+        "overall": 0.6236,
+        "structure": 0.4918,
+        "color": 0.8195,
+        "colorIntersection": 0.6604,
+        "paletteMatch": 0.9052,
+        "detail": 0.7106,
+        "detailRaw": 0.7575,
+        "detailAdded": 0.0938,
+        "bands": 0.6618
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 0,
+          "w": 556,
+          "h": 91
+        },
+        "build": {
+          "x": 2,
+          "y": 0,
+          "w": 542,
+          "h": 91
+        }
+      }
+    },
+    {
+      "id": "partner",
+      "x": 0.0457,
+      "y": 0.4494,
+      "w": 0.3727,
+      "h": 0.0515,
+      "kind": "text",
+      "score": {
+        "overall": 0.6028,
+        "structure": 0.4677,
+        "color": 0.9238,
+        "colorIntersection": 0.8682,
+        "paletteMatch": 0.9538,
+        "detail": 0.4604,
+        "detailRaw": 0.5177,
+        "detailAdded": 0.1146,
+        "bands": 0.69
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 2,
+          "w": 514,
+          "h": 48
+        },
+        "build": {
+          "x": 1,
+          "y": 2,
+          "w": 392,
+          "h": 46
+        }
+      }
+    },
+    {
+      "id": "support",
+      "x": 0.045,
+      "y": 0.5316,
+      "w": 0.3748,
+      "h": 0.0995,
+      "kind": "text",
+      "score": {
+        "overall": 0.7174,
+        "structure": 0.6215,
+        "color": 0.9447,
+        "colorIntersection": 0.9401,
+        "paletteMatch": 0.9472,
+        "detail": 0.5265,
+        "detailRaw": 0.5578,
+        "detailAdded": 0.0625,
+        "bands": 0.9143
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 4,
+          "y": 4,
+          "w": 493,
+          "h": 106
+        },
+        "build": {
+          "x": 0,
+          "y": 10,
+          "w": 480,
+          "h": 77
+        }
+      }
+    },
+    {
+      "id": "hero-actions",
+      "x": 0.0457,
+      "y": 0.6655,
+      "w": 0.3797,
+      "h": 0.0552,
+      "kind": "control",
+      "score": {
+        "overall": 0.4809,
+        "structure": 0.3947,
+        "color": 0.7774,
+        "colorIntersection": 0.5657,
+        "paletteMatch": 0.8914,
+        "detail": 0.1558,
+        "detailRaw": 0.1923,
+        "detailAdded": 0.0729,
+        "bands": 0
+      },
+      "verdict": "missing",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 3,
+          "w": 537,
+          "h": 55
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 433,
+          "h": 28
+        }
+      }
+    },
+    {
+      "id": "optical-sculpture",
+      "x": 0.474,
+      "y": 0.075,
+      "w": 0.526,
+      "h": 0.6772,
+      "kind": "plate",
+      "score": {
+        "overall": 0.5441,
+        "structure": 0.2445,
+        "color": 0.8218,
+        "colorIntersection": 0.7737,
+        "paletteMatch": 0.8477,
+        "detail": 0.5812,
+        "detailRaw": 0.6385,
+        "detailAdded": 0.1146,
+        "bands": 0.56
+      },
+      "verdict": "contradicted",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 748,
+          "h": 749
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 748,
+          "h": 749
+        }
+      }
+    },
+    {
+      "id": "art-caption",
+      "x": 0.9023,
+      "y": 0.7532,
+      "w": 0.0647,
+      "h": 0.0163,
+      "kind": "text",
+      "score": {
+        "overall": 0.5385,
+        "structure": 0.5985,
+        "color": 0.6232,
+        "colorIntersection": 0.2923,
+        "paletteMatch": 0.8014,
+        "detail": 0.1565,
+        "detailRaw": 0.2086,
+        "detailAdded": 0.1042,
+        "bands": 0.6
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 1,
+          "y": 1,
+          "w": 86,
+          "h": 12
+        },
+        "build": {
+          "x": 53,
+          "y": 4,
+          "w": 39,
+          "h": 14
+        }
+      }
+    },
+    {
+      "id": "pillars",
+      "x": 0.045,
+      "y": 0.7939,
+      "w": 0.9114,
+      "h": 0.1899,
+      "kind": "text",
+      "score": {
+        "overall": 0.7186,
+        "structure": 0.8231,
+        "color": 0.9488,
+        "colorIntersection": 0.9265,
+        "paletteMatch": 0.9608,
+        "detail": 0.1534,
+        "detailRaw": 0.2628,
+        "detailAdded": 0.2188,
+        "bands": 0.4686
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 3,
+          "y": 2,
+          "w": 1291,
+          "h": 194
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 1296,
+          "h": 175
+        }
+      }
+    }
+  ],
+  "files": {
+    "sideBySide": "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/side-by-side.png",
+    "heatmap": "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/heatmap.png",
+    "regionFiles": [
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/header.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/creative.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/marketing.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/technology.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/partner.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/support.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/hero-actions.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/optical-sculpture.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/art-caption.png",
+      "C:/Users/anoop/Downloads/JONA/.impeccable/review/diff/final/regions/pillars.png"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "errors": [],
+  "checks": {
+    "scroll_motion": {
+      "start": {
+        "angle": "15.296deg",
+        "layers": [
+          1.76,
+          3.74,
+          6.16
+        ],
+        "word": "0"
+      },
+      "down": {
+        "angle": "23.692deg",
+        "layers": [
+          -19.23,
+          -40.86,
+          -67.3
+        ],
+        "word": "1"
+      },
+      "back": {
+        "angle": "15.296deg",
+        "layers": [
+          1.76,
+          3.74,
+          6.16
+        ],
+        "word": "0"
+      },
+      "layer_deltas": [
+        -20.99,
+        -44.6,
+        -73.46
+      ]
+    },
+    "word_reveal": {
+      "before": "0",
+      "after": "1"
+    },
+    "stacking": [
+      {
+        "top": 24,
+        "position": "sticky"
+      },
+      {
+        "top": 340.140625,
+        "position": "sticky"
+      },
+      {
+        "top": 998.359375,
+        "position": "sticky"
+      },
+      {
+        "top": 1658.359375,
+        "position": "sticky"
+      }
+    ],
+    "filters": true,
+    "cursor_tracking": {
+      "head": 2.8,
+      "pupil": 7.7
+    },
+    "responsive": [
+      {
+        "viewport": 320,
+        "document": 320
+      },
+      {
+        "viewport": 390,
+        "document": 390
+      },
+      {
+        "viewport": 768,
+        "document": 768
+      },
+      {
+        "viewport": 1024,
+        "document": 1024
+      },
+      {
+        "viewport": 1440,
+        "document": 1440
+      }
+    ],
+    "unconfigured_form": true,
+    "reduced_motion": {
+      "motion": "website motion-off",
+      "word": "1",
+      "card": "relative",
+      "turn": "none"
+    }
+  }
+}

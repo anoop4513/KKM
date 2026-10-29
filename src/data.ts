@@ -1,4 +1,4 @@
-import { Video, Instagram, Youtube, Megaphone, Building2, TrendingUp } from 'lucide-react';
+import { Video, Palette, Megaphone, Code, Bot, Workflow, BarChart3, Languages, type LucideIcon } from 'lucide-react';
 interface Project {
   title: string;
   description: string;
@@ -102,36 +102,46 @@ export const clientLogos: { file: string; name: string }[] = [
   { file: 'IMG-20260706-WA0011.jpg',                           name: 'Navadhatri Projects'               },
 ];
 
-export const services = [
+export const services: { icon: LucideIcon; title: string; description: string }[] = [
   {
     icon: Video,
-    title: 'Video Production',
-    description: 'Cinematic reels, promotional videos, and brand films crafted to stop the scroll and drive action.',
+    title: 'Creative & Media Production',
+    description: 'From first frame to final delivery: scriptwriting, filming, editing, motion graphics, sound and localization for social reels, advertisements, promotional films, corporate videos and brand films.',
   },
   {
-    icon: Instagram,
-    title: 'Social Media Management',
-    description: 'End-to-end Instagram and platform management — strategy, content, scheduling, and engagement.',
-  },
-  {
-    icon: Youtube,
-    title: 'YouTube Management',
-    description: 'Channel growth from strategy to optimization — consistent publishing and audience building.',
+    icon: Palette,
+    title: 'Branding & Creative Strategy',
+    description: 'Identity before assets: brand strategy, positioning, visual identity and content strategy that turn an unclear story into a brand people recognize.',
   },
   {
     icon: Megaphone,
-    title: 'Brand Campaigns',
-    description: 'Integrated campaigns that connect your brand with the right audience through compelling storytelling.',
+    title: 'Digital Marketing & Growth',
+    description: 'Creative and media under one roof: social and paid acquisition, search and local SEO, lead generation and conversion campaigns — produced by the team that builds the creative.',
   },
   {
-    icon: Building2,
-    title: 'Real Estate Marketing',
-    description: 'Premium digital marketing tailored for real estate — from project launches to lead generation.',
+    icon: Code,
+    title: 'Website & Digital Experience Development',
+    description: 'From concept to conversion: business websites, landing pages, UI/UX design, customer portals and web applications, engineered to carry creative ambition into measurable journeys.',
   },
   {
-    icon: TrendingUp,
-    title: 'Growth Strategy',
-    description: 'Data-informed growth planning to build lasting brand presence and measurable audience expansion.',
+    icon: Bot,
+    title: 'AI & Business Automation',
+    description: 'Consultation-led capability in market: AI-assisted creative operations, AI chatbots and WhatsApp Business integrations — scoped with clients before any delivery commitment.',
+  },
+  {
+    icon: Workflow,
+    title: 'CRM & Business Technology',
+    description: 'Consultation-led capability in market: CRM implementation, booking and appointment systems, sales pipelines and workflow tooling — scoped per client before build commitments.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Data Analytics & Performance',
+    description: 'Measurement that backs claims: website analytics, campaign performance dashboards, lead tracking and customer journey reporting that turns creative work into evidence.',
+  },
+  {
+    icon: Languages,
+    title: 'Global Creative & Localization',
+    description: 'White-label creative production for international partners: remote editing, creative outsourcing, multilingual voice-overs, subtitles and localized campaigns with production QA standards.',
   },
 ];
 
