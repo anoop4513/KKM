@@ -3,10 +3,10 @@ import { ArrowDownRight, ArrowRight, ArrowUpRight, AudioLines, ChartNoAxesCombin
 import './Home.css';
 
 const pillars = [
-  { name: 'Create', line: 'Make people feel something.', copy: 'Give your business a story people can understand and remember.', scope: ['Brand identity', 'Films & reels', 'Campaign creative'], letter: 'C' },
-  { name: 'Market', line: 'Give good work an audience.', copy: 'Put the right message in front of the people who matter, with a clear next step.', scope: ['Social & search', 'Paid campaigns', 'Lead-generation journeys'], letter: 'M' },
-  { name: 'Automate', line: 'Make space for better work.', copy: 'Explore a better way to handle the tasks that repeat. We assess the workflow before proposing the technology.', scope: ['Workflow discovery', 'Lead routing', 'CRM consultation'], letter: 'A', consultation: true },
-  { name: 'Grow', line: 'Connect the next opportunity.', copy: 'Bring creative work, digital experience and useful measurement into the same conversation.', scope: ['Web experiences', 'Measurement planning', 'Ongoing collaboration'], letter: 'G' },
+  { name: 'Create', line: 'Make people feel something.', copy: 'Give your business a story people can understand and remember.', scope: ['Brand identity', 'Films & reels', 'Campaign creative'] },
+  { name: 'Market', line: 'Give good work an audience.', copy: 'Put the right message in front of the people who matter, with a clear next step.', scope: ['Social & search', 'Paid campaigns', 'Lead-generation journeys'] },
+  { name: 'Automate', line: 'Make space for better work.', copy: 'Explore a better way to handle the tasks that repeat. We assess the workflow before proposing the technology.', scope: ['Workflow discovery', 'Lead routing', 'CRM consultation'], consultation: true },
+  { name: 'Grow', line: 'Connect the next opportunity.', copy: 'Bring creative work, digital experience and useful measurement into the same conversation.', scope: ['Web experiences', 'Measurement planning', 'Ongoing collaboration'] },
 ];
 
 const capabilities = [
@@ -41,16 +41,25 @@ function WordReveal({ children }: { children: string }) {
   return <span className="home-word-reveal" data-home-reveal>{children.split(' ').map((word, index) => <span className="home-reveal-word" key={`${word}-${index}`}>{word}{' '}</span>)}</span>;
 }
 
-function StudioCharacter() {
-  return <div className="home-character" data-home-character aria-hidden="true">
-    <div className="home-character-orbit" />
-    <div className="home-character-head">
-      <span className="home-character-eye"><span /></span>
-      <span className="home-character-eye"><span /></span>
-      <span className="home-character-mouth" />
-    </div>
-    <span className="home-character-caption">A different perspective.</span>
-  </div>;
+function PillarArtwork({ name }: { name: string }) {
+  function follow(event: React.PointerEvent<SVGSVGElement>) {
+    if (event.pointerType !== 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)));
+    const y = Math.max(-1, Math.min(1, (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)));
+    event.currentTarget.style.setProperty('--art-x', `${x * 5}px`);
+    event.currentTarget.style.setProperty('--art-y', `${y * 5}px`);
+  }
+  function reset(event: React.PointerEvent<SVGSVGElement>) {
+    event.currentTarget.style.removeProperty('--art-x');
+    event.currentTarget.style.removeProperty('--art-y');
+  }
+  return <svg className={`home-pillar-art home-pillar-art-${name.toLowerCase()}`} viewBox="0 0 300 220" fill="none" aria-hidden="true" focusable="false" onPointerMove={follow} onPointerLeave={reset} onPointerCancel={reset}>
+    {name === 'Create' && <g><rect x="47" y="30" width="130" height="146" fill="#191919"/><rect x="87" y="46" width="128" height="146" fill="#f5f3ed" stroke="#191919" strokeWidth="1.5"/><rect x="123" y="70" width="132" height="112" fill="#dc3b26"/><circle cx="178" cy="117" r="25" stroke="#f5f3ed" strokeWidth="3"/><rect x="200" y="125" width="25" height="25" fill="#f5f3ed"/><path d="M150 157h50" stroke="#f5f3ed" strokeWidth="3"/><path d="M69 17v25M57 29h25M224 187v20M214 197h20" stroke="#191919" strokeWidth="1.5"/></g>}
+    {name === 'Market' && <g><circle cx="149" cy="110" r="75" stroke="#191919" strokeWidth="1.5"/><circle cx="149" cy="110" r="52" stroke="#191919" strokeWidth="1.5"/><circle cx="149" cy="110" r="28" fill="#dc3b26"/><path d="M28 110h78M192 110h80M149 15v51M149 154v51" stroke="#191919" strokeWidth="1.5"/><path d="M56 57l25 14M56 163l25-14M241 57l-25 14M241 163l-25-14" stroke="#dc3b26" strokeWidth="3"/></g>}
+    {name === 'Automate' && <g><path d="M74 65h58v44h44v46h50M74 155h40M174 65h52M126 155h8" stroke="#191919" strokeWidth="2"/><rect x="44" y="47" width="36" height="36" fill="#dc3b26"/><rect x="120" y="47" width="30" height="36" fill="#191919"/><rect x="166" y="47" width="30" height="36" fill="#f5f3ed" stroke="#191919" strokeWidth="1.5"/><rect x="220" y="47" width="36" height="36" fill="#dc3b26"/><rect x="45" y="137" width="36" height="36" fill="#f5f3ed" stroke="#191919" strokeWidth="1.5"/><rect x="118" y="137" width="36" height="36" fill="#dc3b26"/><rect x="165" y="137" width="30" height="36" fill="#191919"/><rect x="220" y="137" width="36" height="36" fill="#f5f3ed" stroke="#191919" strokeWidth="1.5"/></g>}
+    {name === 'Grow' && <g><path d="M46 180V84C46 47 75 19 112 19h142v161H46Z" stroke="#f5f3ed" strokeWidth="1.5"/><path d="M69 180V94c0-29 23-52 52-52h109v138H69Z" stroke="#f5f3ed" strokeWidth="1.5"/><path d="M92 180v-75c0-23 18-40 41-40h73v115H92Z" fill="#191919"/><path d="M116 180v-64c0-16 13-28 29-28h38v92h-67Z" fill="#f5f3ed"/><circle cx="150" cy="135" r="12" fill="#dc3b26"/></g>}
+  </svg>;
 }
 
 function useHomeMotion(root: React.RefObject<HTMLDivElement>) {
@@ -60,12 +69,9 @@ function useHomeMotion(root: React.RefObject<HTMLDivElement>) {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
     let frame = 0;
-    let pointerX = 0;
-    let pointerY = 0;
     const layers = Array.from(element.querySelectorAll<HTMLElement>('[data-home-parallax]'));
     const turns = Array.from(element.querySelectorAll<HTMLElement>('[data-home-turn]'));
     const reveals = Array.from(element.querySelectorAll<HTMLElement>('[data-home-reveal]'));
-    const character = element.querySelector<HTMLElement>('[data-home-character]');
     const clamp = (number: number, min: number, max: number) => Math.min(max, Math.max(min, number));
     const paint = () => {
       frame = 0;
@@ -92,27 +98,10 @@ function useHomeMotion(root: React.RefObject<HTMLDivElement>) {
           word.style.setProperty('--home-word-opacity', String(animated ? .6 + local * .4 : 1));
         });
       }
-      if (character) {
-        character.style.setProperty('--home-head-x', `${animated && finePointer.matches ? pointerX * 8 : 0}px`);
-        character.style.setProperty('--home-head-y', `${animated && finePointer.matches ? pointerY * 6 : 0}px`);
-        character.style.setProperty('--home-head-rotation', `${animated && finePointer.matches ? pointerX * 5 : 0}deg`);
-        character.style.setProperty('--home-eye-x', `${animated && finePointer.matches ? pointerX * 12 : 0}px`);
-        character.style.setProperty('--home-eye-y', `${animated && finePointer.matches ? pointerY * 10 : 0}px`);
-      }
     };
     const requestPaint = () => { if (!frame) frame = window.requestAnimationFrame(paint); };
-    const onPointer = (event: PointerEvent) => {
-      if (!finePointer.matches || !character) return;
-      const rect = character.getBoundingClientRect();
-      pointerX = clamp((event.clientX - (rect.left + rect.width / 2)) / 420, -1, 1);
-      pointerY = clamp((event.clientY - (rect.top + rect.height / 2)) / 320, -1, 1);
-      requestPaint();
-    };
-    const resetPointer = () => { pointerX = 0; pointerY = 0; requestPaint(); };
     window.addEventListener('scroll', requestPaint, { passive: true });
     window.addEventListener('resize', requestPaint);
-    element.addEventListener('pointermove', onPointer, { passive: true });
-    element.addEventListener('pointerleave', resetPointer);
     reduced.addEventListener('change', requestPaint);
     finePointer.addEventListener('change', requestPaint);
     requestPaint();
@@ -120,8 +109,6 @@ function useHomeMotion(root: React.RefObject<HTMLDivElement>) {
       window.cancelAnimationFrame(frame);
       window.removeEventListener('scroll', requestPaint);
       window.removeEventListener('resize', requestPaint);
-      element.removeEventListener('pointermove', onPointer);
-      element.removeEventListener('pointerleave', resetPointer);
       reduced.removeEventListener('change', requestPaint);
       finePointer.removeEventListener('change', requestPaint);
     };
@@ -145,11 +132,11 @@ export default function Home({ proposal }: { proposal: ReactNode }) {
     </section>
 
     <section className="home-pillars home-wrap home-section" aria-labelledby="home-pillars-heading">
-      <div className="home-pillar-intro"><h2 id="home-pillars-heading"><WordReveal>One partner. More possibilities.</WordReveal></h2><div className="home-pillar-aside"><p>A creative, digital growth and business technology agency helping ambitious businesses turn ideas into lasting impact, anywhere in the world.</p><StudioCharacter /></div></div>
+      <div className="home-pillar-intro"><h2 id="home-pillars-heading"><WordReveal>One partner. More possibilities.</WordReveal></h2><div className="home-pillar-aside"><p>A creative, digital growth and business technology agency helping ambitious businesses turn ideas into lasting impact, anywhere in the world.</p></div></div>
       <div className="home-pillar-stack">
         {pillars.map((pillar, index) => <details className={`home-pillar home-pillar-${pillar.name.toLowerCase()}`} open key={pillar.name} style={{ '--home-stack-index': index } as CSSProperties}>
           <summary><span className="home-pillar-title">{pillar.name}<span>.</span></span><span className="home-pillar-line">{pillar.line}</span><Plus className="home-pillar-plus" size={36} strokeWidth={1.4} aria-hidden="true" /></summary>
-          <div className="home-pillar-content"><div className="home-pillar-copy"><p>{pillar.copy}</p>{pillar.consultation && <span className="home-consultation">Consultation-led</span>}<ul>{pillar.scope.map((scope) => <li key={scope}>{scope}</li>)}</ul><a className="home-text-link" href={pillar.name === 'Automate' ? '#contact' : '#services'}>{pillar.consultation ? 'Discuss the possibilities' : `Explore ${pillar.name.toLowerCase()}`}<ArrowUpRight size={19} aria-hidden="true" /></a></div><span className="home-pillar-letter" aria-hidden="true">{pillar.letter}<span /></span></div>
+          <div className="home-pillar-content"><div className="home-pillar-copy"><p>{pillar.copy}</p>{pillar.consultation && <span className="home-consultation">Consultation-led</span>}<ul>{pillar.scope.map((scope) => <li key={scope}>{scope}</li>)}</ul><a className="home-text-link" href={pillar.name === 'Automate' ? '#contact' : '#services'}>{pillar.consultation ? 'Discuss the possibilities' : `Explore ${pillar.name.toLowerCase()}`}<ArrowUpRight size={19} aria-hidden="true" /></a></div><PillarArtwork name={pillar.name} /></div>
         </details>)}
       </div>
     </section>
