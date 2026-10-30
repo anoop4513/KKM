@@ -1,6 +1,6 @@
-# Design: Agency manifesto
+# Design: Agency dispatch
 
-The user requested a new visual system and delegated selection of a cohesive modern agency design. Concept C is the working direction: a full-width oversized sans-serif headline, vermilion statement band, warm white ground, black type and a four-pillar editorial index. This direction uses new components, assets, copy and layouts. No prior portfolio records are imported.
+The user selected the dispatch image on October 29, 2026: a warm-white left field and a vermilion right field with an oversized headline crossing both, introductory copy and buttons on the left, and four staggered textured art panels on the right. The selected reference is `.impeccable/redesign/concepts/dispatch.png` in the parent project. The four abstract panels are generated, replaceable concept art rather than client work. Live headings, navigation and controls are semantic HTML. This direction uses new components, assets, copy and layouts. No prior portfolio records are imported.
 
 Palette: ink #181715; paper #f8f5ef; vermilion #c9341c for accessible controls; warm coral #ed4a2d as large decorative surface; border #d8d1c6. Labels and contrast are checked at their actual background.
 

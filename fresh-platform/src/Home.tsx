@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
-import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, AudioLines, ChartNoAxesCombined, Check, Code2, Globe2, Layers3, MoveUpRight, Plus, Sparkles, Workflow } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, ArrowUpRight, AudioLines, ChartNoAxesCombined, Check, Code2, Globe2, Layers3, MoveUpRight, Plus, Sparkles, Workflow } from 'lucide-react';
 import './Home.css';
 
 const pillars = [
@@ -136,16 +136,16 @@ export default function Home({ proposal }: { proposal: ReactNode }) {
 
   return <div className="home-page" ref={root}>
     <section className="home-hero home-wrap" aria-labelledby="home-headline">
-      <h1 className="home-headline" id="home-headline"><span>Creative.</span>{' '}<span>Marketing.</span>{' '}<span>Technology.</span>{' '}<span className="home-headline-partner">One Growth Partner.<ArrowUpRight strokeWidth={1.5} aria-hidden="true" /></span></h1>
+      <h1 className="home-headline" id="home-headline" data-home-parallax="12"><span>Creative. Marketing.</span>{' '}<span>Technology.</span>{' '}<span>One Growth Partner.</span></h1>
       <div className="home-hero-bottom">
-        <div className="home-hero-tagline"><span>CREATE</span><span>MARKET</span><span>AUTOMATE</span><span>GROW</span></div>
-        <div className="home-hero-intro"><p>We help ambitious businesses build stronger brands, reach the right audiences and grow through creative storytelling, digital marketing, technology and smart automation.</p><div className="home-actions"><a className="home-button home-button-ink" href="#contact">Get a Proposal<ArrowUpRight size={19} aria-hidden="true" /></a><a className="home-text-link" href="#services">Explore Our Services<ArrowDown size={19} aria-hidden="true" /></a></div></div>
-        <div className="home-hero-device" aria-hidden="true"><div className="home-device-orbit" data-home-parallax="70"><span className="home-device-cross" data-home-turn="160"><span /><span /><span /><span /></span></div><div className="home-device-dot" data-home-parallax="-100" /><span className="home-device-text">A wider perspective.<br />A connected approach.</span></div>
+        <div className="home-hero-intro"><p>We help ambitious businesses build stronger brands, reach the right audiences and grow through creative storytelling, digital marketing, technology and smart automation.</p><div className="home-actions"><a className="home-button home-button-ink" href="#contact">Get a Proposal<ArrowUpRight size={19} aria-hidden="true" /></a><a className="home-text-link" href="#services">Explore Our Services<ArrowUpRight size={19} aria-hidden="true" /></a></div></div>
+        <div className="home-hero-tagline"><span>IDEAS</span><span>PEOPLE</span><span>TECHNOLOGY</span><span>FOR A BRIGHTER TOMORROW</span></div>
       </div>
+      <div className="home-hero-art" data-home-parallax="-55" aria-hidden="true"><img src="/art/dispatch-panels.webp" alt="" width="1024" height="1024" {...{ fetchpriority: 'high' }} /><div className="home-art-labels"><span>CREATE</span><span>MARKET</span><span>AUTOMATE</span><span>GROW</span></div></div>
     </section>
 
     <section className="home-pillars home-wrap home-section" aria-labelledby="home-pillars-heading">
-      <div className="home-pillar-intro"><h2 id="home-pillars-heading"><WordReveal>Good stories move people. Connected thinking moves businesses.</WordReveal></h2><div className="home-pillar-aside"><p>From the first idea to the next opportunity. Four ways to make the work work harder.</p><StudioCharacter /></div></div>
+      <div className="home-pillar-intro"><h2 id="home-pillars-heading"><WordReveal>One partner. More possibilities.</WordReveal></h2><div className="home-pillar-aside"><p>A creative, digital growth and business technology agency helping ambitious businesses turn ideas into lasting impact, anywhere in the world.</p><StudioCharacter /></div></div>
       <div className="home-pillar-stack">
         {pillars.map((pillar, index) => <details className={`home-pillar home-pillar-${pillar.name.toLowerCase()}`} open key={pillar.name} style={{ '--home-stack-index': index } as CSSProperties}>
           <summary><span className="home-pillar-title">{pillar.name}<span>.</span></span><span className="home-pillar-line">{pillar.line}</span><Plus className="home-pillar-plus" size={36} strokeWidth={1.4} aria-hidden="true" /></summary>
