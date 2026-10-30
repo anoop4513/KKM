@@ -126,7 +126,6 @@ export default function Home({ proposal }: { proposal: ReactNode }) {
       <h1 className="home-headline" id="home-headline" data-home-parallax="12"><span>Creative. Marketing.</span>{' '}<span>Technology.</span>{' '}<span>One Growth Partner.</span></h1>
       <div className="home-hero-bottom">
         <div className="home-hero-intro"><p>We help ambitious businesses build stronger brands, reach the right audiences and grow through creative storytelling, digital marketing, technology and smart automation.</p><div className="home-actions"><a className="home-button home-button-ink" href="#contact">Get a Proposal<ArrowUpRight size={19} aria-hidden="true" /></a><a className="home-text-link" href="#services">Explore Our Services<ArrowUpRight size={19} aria-hidden="true" /></a></div></div>
-        <div className="home-hero-tagline"><span>IDEAS</span><span>PEOPLE</span><span>TECHNOLOGY</span><span>FOR A BRIGHTER TOMORROW</span></div>
       </div>
       <div className="home-hero-art" data-home-parallax="-55" aria-hidden="true"><img src="/art/dispatch-panels.webp" alt="" width="1024" height="1024" {...{ fetchpriority: 'high' }} /><div className="home-art-labels"><span>CREATE</span><span>MARKET</span><span>AUTOMATE</span><span>GROW</span></div></div>
     </section>
