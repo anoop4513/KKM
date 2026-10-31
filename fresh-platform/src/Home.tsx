@@ -41,24 +41,6 @@ function WordReveal({ children }: { children: string }) {
   return <span className="home-word-reveal" data-home-reveal>{children.split(' ').map((word, index) => <span className="home-reveal-word" key={`${word}-${index}`}>{word}{' '}</span>)}</span>;
 }
 
-function GrowArtwork() {
-  function follow(event: React.PointerEvent<SVGSVGElement>) {
-    if (event.pointerType !== 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = Math.max(-1, Math.min(1, (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2)));
-    const y = Math.max(-1, Math.min(1, (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2)));
-    event.currentTarget.style.setProperty('--art-x', `${x * 5}px`);
-    event.currentTarget.style.setProperty('--art-y', `${y * 5}px`);
-  }
-  function reset(event: React.PointerEvent<SVGSVGElement>) {
-    event.currentTarget.style.removeProperty('--art-x');
-    event.currentTarget.style.removeProperty('--art-y');
-  }
-  return <svg className="home-pillar-art home-pillar-art-grow" viewBox="0 0 300 220" fill="none" aria-hidden="true" focusable="false" onPointerMove={follow} onPointerLeave={reset} onPointerCancel={reset}>
-    <g><path d="M46 180V84C46 47 75 19 112 19h142v161H46Z" stroke="#f5f3ed" strokeWidth="1.5"/><path d="M69 180V94c0-29 23-52 52-52h109v138H69Z" stroke="#f5f3ed" strokeWidth="1.5"/><path d="M92 180v-75c0-23 18-40 41-40h73v115H92Z" fill="#191919"/><path d="M116 180v-64c0-16 13-28 29-28h38v92h-67Z" fill="#f5f3ed"/><circle cx="150" cy="135" r="12" fill="#dc3b26"/></g>
-  </svg>;
-}
-
 function useHomeMotion(root: React.RefObject<HTMLDivElement>) {
   useEffect(() => {
     const element = root.current;
@@ -132,7 +114,7 @@ export default function Home({ proposal }: { proposal: ReactNode }) {
       <div className="home-pillar-stack">
         {pillars.map((pillar, index) => <details className={`home-pillar home-pillar-${pillar.name.toLowerCase()}`} open key={pillar.name} style={{ '--home-stack-index': index } as CSSProperties}>
           <summary><span className="home-pillar-title">{pillar.name}<span>.</span></span><span className="home-pillar-line">{pillar.line}</span><Plus className="home-pillar-plus" size={36} strokeWidth={1.4} aria-hidden="true" /></summary>
-          <div className="home-pillar-content"><div className="home-pillar-copy"><p>{pillar.copy}</p>{pillar.consultation && <span className="home-consultation">Consultation-led</span>}<ul>{pillar.scope.map((scope) => <li key={scope}>{scope}</li>)}</ul><a className="home-text-link" href={pillar.name === 'Automate' ? '#contact' : '#services'}>{pillar.consultation ? 'Discuss the possibilities' : `Explore ${pillar.name.toLowerCase()}`}<ArrowUpRight size={19} aria-hidden="true" /></a></div>{pillar.name === 'Grow' && <GrowArtwork />}</div>
+          <div className="home-pillar-content"><div className="home-pillar-copy"><p>{pillar.copy}</p>{pillar.consultation && <span className="home-consultation">Consultation-led</span>}<ul>{pillar.scope.map((scope) => <li key={scope}>{scope}</li>)}</ul><a className="home-text-link" href={pillar.name === 'Automate' ? '#contact' : '#services'}>{pillar.consultation ? 'Discuss the possibilities' : `Explore ${pillar.name.toLowerCase()}`}<ArrowUpRight size={19} aria-hidden="true" /></a></div></div>
         </details>)}
       </div>
     </section>

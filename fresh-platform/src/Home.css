@@ -378,10 +378,8 @@
 @media(prefers-reduced-motion:reduce){.home-hero .home-headline{transform:none!important}}
 
 /* Each pillar gets its own geometric visual, expressed in the site's ink and vermilion palette. */
-.home-pillar-art{width:min(100%,300px);height:auto;justify-self:center;align-self:center;overflow:visible;transform:translate(var(--art-x,0px),var(--art-y,0px));transition:transform 250ms cubic-bezier(.16,1,.3,1);touch-action:pan-y}
 .home-pillar-aside{justify-content:flex-start}
-@media(max-width:640px){.home-pillar-content{grid-template-columns:1fr;gap:14px}.home-pillar-art{width:min(52%,200px);justify-self:end;margin-top:-6px}.home-pillar-aside>p{max-width:100%}}
-@media(prefers-reduced-motion:reduce),(hover:none),(pointer:coarse){.home-pillar-art{transform:none!important;transition:none}}
+@media(max-width:640px){.home-pillar-content{grid-template-columns:1fr;gap:14px}.home-pillar-aside>p{max-width:100%}}
 
-/* The first three pillars retain their copy without decorative artwork. */
-.home-pillar:not(.home-pillar-grow) .home-pillar-content { grid-template-columns: minmax(0, 640px); min-height: 0; }
+/* Keep the pillar copy compact without decorative artwork. */
+.home-pillar .home-pillar-content { grid-template-columns: minmax(0, 640px); min-height: 0; }
