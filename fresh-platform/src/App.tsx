@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Menu, MessageCircle, X } from 'lucide-react';
 import Home from './Home';
+import { contact } from './contact';
 import LeadForm, { LEAD_SERVICES } from './LeadForm';
 import { activateAnalyticsIfConsented, analyticsConfigured, setAnalyticsConsent, trackEvent } from './tracking';
 
 const navigation = [['#work','Work'],['#services','Services'],['#industries','Industries'],['#global','Global']] as const;
-const number = String(import.meta.env.VITE_WHATSAPP_NUMBER || '').trim();
+const number = contact.phoneDigits;
 const configuredNumber = /^\d{8,15}$/.test(number) ? number : '';
 function bookingLink(value: string) { try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password ? url.href : ''; } catch { return ''; } }
 const booking = bookingLink(String(import.meta.env.VITE_BOOKING_URL || ''));

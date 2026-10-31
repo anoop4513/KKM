@@ -383,3 +383,11 @@
 
 /* Keep the pillar copy compact without decorative artwork. */
 .home-pillar .home-pillar-content { grid-template-columns: minmax(0, 640px); min-height: 0; }
+
+.home-contact-details { margin-top: 42px; border-top: 1px solid var(--home-ink); max-width: 490px; }
+.home-contact-details > div { padding: 15px 0; border-bottom: 1px solid var(--home-line); }
+.home-contact-details > div > span { display: block; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px; }
+.home-contact-details > div > p { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; margin: 0; font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+.home-contact-details a { text-decoration: underline; text-underline-offset: 4px; }
+.home-contact-details button { border: 0; background: none; color: #a72816; font-size: 12px; font-weight: 600; min-height: 36px; padding: 4px 0; text-decoration: underline; text-underline-offset: 3px; }
+.home-contact-details .home-copy-status { min-height: 1.5em; margin: 7px 0 0; font-size: 12px; line-height: 1.5; }

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { ArrowDownRight, ArrowRight, ArrowUpRight, AudioLines, ChartNoAxesCombined, Check, Code2, Globe2, Layers3, MoveUpRight, Plus, Sparkles, Workflow } from 'lucide-react';
 import './Home.css';
+import { contact } from './contact';
 
 const pillars = [
   { name: 'Create', line: 'Make people feel something.', copy: 'Give your business a story people can understand and remember.', scope: ['Brand identity', 'Films & reels', 'Campaign creative'] },
@@ -94,6 +95,25 @@ function useHomeMotion(root: React.RefObject<HTMLDivElement>) {
   }, [root]);
 }
 
+function ContactDetails() {
+  const [copyStatus, setCopyStatus] = useState('');
+  async function copy(value: string, label: string) {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopyStatus(`${label} copied.`);
+    } catch {
+      setCopyStatus(`Could not copy ${label.toLowerCase()}. Please select it manually.`);
+    }
+  }
+  return <div className="home-contact-details" aria-label="Contact details">
+    <div><span>Contact number / WhatsApp</span><p><a href={`tel:+${contact.phoneDigits}`}>{contact.phoneDisplay}</a><button type="button" onClick={() => copy(contact.phoneDisplay, 'Phone number')} aria-label="Copy phone number">Copy</button></p></div>
+    <div><span>Official email</span><p><a href={`mailto:${contact.email}`}>{contact.email}</a><button type="button" onClick={() => copy(contact.email, 'Email address')} aria-label="Copy email address">Copy</button></p></div>
+    <div><span>Official website</span><p><a href={contact.website}>{contact.websiteDisplay}</a></p></div>
+    <div><span>Business location</span><p>{contact.location}</p></div>
+    <p className="home-copy-status" role="status" aria-live="polite">{copyStatus}</p>
+  </div>;
+}
+
 export default function Home({ proposal }: { proposal: ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
   const [workFilter, setWorkFilter] = useState('All approaches');
@@ -146,7 +166,7 @@ export default function Home({ proposal }: { proposal: ReactNode }) {
       <div className="home-partnership"><div><h3>Your creative team.<br />A wider production circle.</h3><p>White-label video editing, short-form content, motion graphics and localization coordination. A project or an ongoing production scope, shaped around your team.</p><a href="#contact" className="home-button home-button-paper">Discuss a Global Partnership<ArrowUpRight size={19} aria-hidden="true" /></a></div><ul><li><Check size={18} aria-hidden="true" /><span>One shared brief and clear asset handoffs</span></li><li><Check size={18} aria-hidden="true" /><span>Agreed review rounds and feedback owners</span></li><li><Check size={18} aria-hidden="true" /><span>Format, brand and localization quality checks</span></li><li><Check size={18} aria-hidden="true" /><span>Turnaround, revisions and capacity agreed per brief</span></li></ul></div>
     </div></section>
 
-    <section id="contact" className="home-contact home-wrap home-section" aria-labelledby="home-contact-heading"><div className="home-contact-intro"><h2 id="home-contact-heading">A good next step<br />starts with<br /><span>“let’s talk.”</span></h2><p>Tell us about the business, the challenge and the work you have in mind. We’ll use your brief to shape the next conversation.</p><div className="home-contact-checks"><span><Check size={17} aria-hidden="true" />A brief, not a commitment</span><span><Check size={17} aria-hidden="true" />A scope shaped around your needs</span><span><Check size={17} aria-hidden="true" />Clear next steps before work begins</span></div><ArrowDownRight className="home-contact-arrow" size={100} strokeWidth={1.15} aria-hidden="true" /></div><div className="home-proposal">{proposal}</div></section>
+    <section id="contact" className="home-contact home-wrap home-section" aria-labelledby="home-contact-heading"><div className="home-contact-intro"><h2 id="home-contact-heading">A good next step<br />starts with<br /><span>“let’s talk.”</span></h2><p>Tell us about the business, the challenge and the work you have in mind. We’ll use your brief to shape the next conversation.</p><div className="home-contact-checks"><span><Check size={17} aria-hidden="true" />A brief, not a commitment</span><span><Check size={17} aria-hidden="true" />A scope shaped around your needs</span><span><Check size={17} aria-hidden="true" />Clear next steps before work begins</span></div><ContactDetails /><ArrowDownRight className="home-contact-arrow" size={100} strokeWidth={1.15} aria-hidden="true" /></div><div className="home-proposal">{proposal}</div></section>
     <div className="home-closing home-wrap" aria-hidden="true"><span>CREATE.</span><span>MARKET.</span><span>AUTOMATE.</span><span>GROW.</span><ArrowRight strokeWidth={1.4} /></div>
   </div>;
 }

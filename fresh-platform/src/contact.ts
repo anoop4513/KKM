@@ -1,0 +1,1 @@
+export const contact = { phoneDisplay: '+91 76718 33738', phoneDigits: '917671833738', email: 'kathakantam@gmail.com', website: 'https://www.kathakantammedia.in', websiteDisplay: 'www.kathakantammedia.in', location: 'Hindupur, Sri Sathya Sai District, Andhra Pradesh, India' } as const;

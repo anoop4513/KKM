@@ -6,4 +6,4 @@ Palette: ink #181715; paper #f8f5ef; vermilion #c9341c for accessible controls; 
 
 Motion: scroll-linked depth, text reveal, scroll-position rotation, stacked surfaces, with a reduced-motion path. The character was removed at the user's request. Nothing conceals essential content if scripts fail.
 
-Approved logo, business WhatsApp, booking link, enquiry receiver and verified case studies have not been supplied in the new brief; all remain configurable and honestly represented.
+Business contact details were supplied by the user. Approved logo, booking link, enquiry receiver and verified case studies have not been supplied; those remain honestly represented.

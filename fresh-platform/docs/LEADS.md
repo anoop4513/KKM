@@ -35,7 +35,7 @@ An accepted response means that the configured receiver acknowledged the enquiry
 
 ## Optional contact settings
 
-`.env.example` leaves `VITE_WHATSAPP_NUMBER`, `VITE_BOOKING_URL`, and `VITE_GA4_MEASUREMENT_ID` blank. The shell enables WhatsApp only for a real 8–15 digit international number, encodes contextual messages, and excludes form PII. Booking requires a valid approved HTTPS URL with no URL credentials. Missing settings leave a truthful unavailable state; they never point to an invented contact. The lead form has no dependency on either setting.
+The user-supplied business number is maintained in `src/contact.ts` and enables WhatsApp links with contextual messages that exclude form PII. `.env.example` leaves `VITE_BOOKING_URL` and `VITE_GA4_MEASUREMENT_ID` blank. Booking requires a valid approved HTTPS URL with no URL credentials. Missing settings leave a truthful unavailable state; they never point to an invented contact. The lead form has no dependency on either setting.
 
 Vite's development server does not execute Vercel API handlers by itself. Use a controlled local handler server or the configured Vercel development/deployed environment to exercise delivery. A static preview with no receiver intentionally shows unavailable.
 
