@@ -382,3 +382,6 @@
 .home-pillar-aside{justify-content:flex-start}
 @media(max-width:640px){.home-pillar-content{grid-template-columns:1fr;gap:14px}.home-pillar-art{width:min(52%,200px);justify-self:end;margin-top:-6px}.home-pillar-aside>p{max-width:100%}}
 @media(prefers-reduced-motion:reduce),(hover:none),(pointer:coarse){.home-pillar-art{transform:none!important;transition:none}}
+
+/* The first three pillars retain their copy without decorative artwork. */
+.home-pillar:not(.home-pillar-grow) .home-pillar-content { grid-template-columns: minmax(0, 640px); min-height: 0; }
