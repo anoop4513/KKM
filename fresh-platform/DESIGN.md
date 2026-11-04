@@ -6,4 +6,4 @@ Palette: ink #181715; paper #f8f5ef; vermilion #c9341c for accessible controls; 
 
 Motion: scroll-linked depth, text reveal, scroll-position rotation, stacked surfaces, with a reduced-motion path. The character was removed at the user's request. Nothing conceals essential content if scripts fail.
 
-Business contact details were supplied by the user. Approved logo, booking link, enquiry receiver and verified case studies have not been supplied; those remain honestly represented.
+Business contact details and the logo were supplied by the user. The user selected a cleaned version of the logo for the site. A booking link, enquiry receiver and verified case studies have not been supplied; those remain honestly represented.

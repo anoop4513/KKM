@@ -10,7 +10,7 @@ const number = contact.phoneDigits;
 const configuredNumber = /^\d{8,15}$/.test(number) ? number : '';
 function bookingLink(value: string) { try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password ? url.href : ''; } catch { return ''; } }
 const booking = bookingLink(String(import.meta.env.VITE_BOOKING_URL || ''));
-function Brand() { return <a className="site-brand" href="#top" aria-label="Katha Kantam Media home"><svg viewBox="0 0 42 42" aria-hidden="true"><path fill="currentColor" d="M3 2h10v38H3zm12 19L31 2h10L24 22l18 18H29L15 27z"/></svg><span>KATHA KANTAM <b>MEDIA</b></span></a>; }
+function Brand() { return <a className="site-brand" href="#top" aria-label="Katha Kantam Media home"><span className="site-brand-mark"><img src="/brand/kkm-logo.png" alt="" width="64" height="58" /></span><span>KATHA KANTAM <b>MEDIA</b></span></a>; }
 export default function App() {
   const [menu, setMenu] = useState(false);
   const [service, setService] = useState('');
