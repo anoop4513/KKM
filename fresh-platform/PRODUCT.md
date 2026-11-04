@@ -15,7 +15,7 @@ Help visitors identify a suitable service and request a proposal or discovery co
 Katha Kantam Media; CREATE • MARKET • AUTOMATE • GROW. Approved K asset required but not supplied; use a clearly provisional replaceable mark.
 
 ## Capabilities and Constraints
-Eight divisions from the supplied October 29 brief. Advanced AI, CRM, analytics and custom enterprise software are consultation-led. Markets are not offices. Do not use old portfolio data or invent client results. Real integrations need approved contact and provider configuration.
+Eight divisions from the supplied October 29 brief. Advanced AI, CRM, analytics and custom enterprise software are consultation-led. Markets are not offices. At the user's request, client logos from supplied Katha Kantam Media materials may be shown; do not invent client results. Real integrations need approved contact and provider configuration.
 
 ## Accessibility & Inclusion
 Target WCAG 2.2 AA, mobile use and reduced motion.

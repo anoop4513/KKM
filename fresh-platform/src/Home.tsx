@@ -10,6 +10,20 @@ const pillars = [
   { name: 'Grow', line: 'Connect the next opportunity.', copy: 'Bring creative work, digital experience and useful measurement into the same conversation.', scope: ['Web experiences', 'Measurement planning', 'Ongoing collaboration'] },
 ];
 
+const clientBrands = [
+  { name: 'Orchid Aesthetic & Beauty Clinic', image: 'orchid.png' },
+  { name: 'Godrej Capital', image: 'godrej-capital.png' },
+  { name: 'Lakshya Learning Centre', image: 'lakshya.png' },
+  { name: 'First Steps Play School', image: 'first-steps.png' },
+  { name: 'Truelancer', image: 'truelancer.png' },
+  { name: 'Verbo Labs', image: 'verbo-labs.png' },
+  { name: 'Deepti School', image: 'deepti-school.png' },
+  { name: 'Navadhatri Projects', image: 'navadhatri.png' },
+  { name: 'Surya Vidya Nikethan', image: 'surya-vidya-nikethan.png' },
+  { name: 'Murf.AI', image: 'murf-ai.png', cropped: true },
+  { name: 'Rajamane', image: 'rajamane.jpeg' },
+];
+
 const capabilities = [
   { title: 'Creative & Media Production', copy: 'Films, reels, ads and multilingual media. A clear idea, carried from the first script to the final frame.', icon: AudioLines, cta: 'Discuss a production brief' },
   { title: 'Branding & Creative Strategy', copy: 'Positioning, identity and content direction that give your business a consistent voice.', icon: Sparkles, cta: 'Discuss your brand' },
@@ -150,7 +164,14 @@ export default function Home({ proposal }: { proposal: ReactNode }) {
       <div className="home-industry-grid">{industries.map((industry) => <article className="home-industry" key={industry.title}><h3>{industry.title}</h3><p>{industry.copy}</p><span>{industry.detail}</span><a href="#contact" className="home-industry-link" aria-label={`Discuss ${industry.title.toLowerCase()}`}><ArrowUpRight size={26} strokeWidth={1.4} aria-hidden="true" /></a></article>)}</div>
     </div></section>
 
-    <section id="work" className="home-work home-wrap home-section" aria-labelledby="home-work-heading">
+    <section id="work" className="home-clients home-wrap home-section" aria-labelledby="home-clients-heading">
+      <div className="home-section-heading"><h2 id="home-clients-heading">Good company.<br /><em>Shared stories.</em></h2><p>Brands we’ve worked with.</p></div>
+      <ul className="home-client-grid">{clientBrands.map((brand) => <li key={brand.name}>
+        <figure><span className={`home-client-mark${brand.cropped ? ' home-client-mark-cropped' : ''}`}><img src={`/client-logos/${brand.image}`} alt="" loading="lazy" decoding="async" /></span><figcaption>{brand.name}</figcaption></figure>
+      </li>)}</ul>
+    </section>
+
+    <section className="home-work home-wrap home-section" aria-labelledby="home-work-heading">
       <div className="home-section-heading"><h2 id="home-work-heading">See how it<br />could come together.</h2><div><p>Three example briefs. A look at how creative, marketing and technology can support the same goal.</p><p className="home-work-disclosure">Illustrative approaches only. These are not client projects, delivered work or verified outcomes.</p></div></div>
       <div className="home-work-filters" role="group" aria-label="Filter illustrative approaches">{['All approaches', 'Education', 'Property', 'Agency'].map((filter) => <button type="button" key={filter} aria-pressed={workFilter === filter} onClick={() => setWorkFilter(filter)}>{filter}<span>{filter === 'All approaches' ? '3' : '1'}</span></button>)}</div>
       <p className="home-sr-only" role="status">{shownScenarios.length} illustrative {shownScenarios.length === 1 ? 'approach' : 'approaches'} shown.</p>
